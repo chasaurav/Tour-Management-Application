@@ -1,0 +1,243 @@
+@keyframes scroll {
+	0% {
+		transform: translateY(0);
+	}
+	30% {
+		transform: translateY(60px);
+	}
+}
+
+*{
+	padding: 0;
+	margin: 0;
+	font-family: 'Roboto', sans-serif;
+	font-size: 15px;
+	font-weight: 400;
+	color: #000;
+}
+.container{
+	padding: 0;
+	margin: 0;
+	background: ghostwhite;
+}
+.headerWrapper{
+	background: url(../images/landingBg.jpg);
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	height: 100vh;
+	width: 100%;
+}
+.nav{
+	width: 100%;
+	/*background: rgba(0,0,0,.5);*/
+	background: transparent;
+}
+.logoBrand a {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.contactItems{
+	margin-top: 10px;
+	list-style-type: none;
+}
+.contactItems li, .contactItems li i {
+	color: #fff;
+	font-size: 1.2em;
+	display: inline-block;
+	margin: 0 8px;
+}
+.contactItems li a{
+	color: #fff;
+	text-decoration: none;
+}
+.textContent{
+	position: absolute;
+	top: 60%;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+.textContent h2{
+	color: #fff;
+	font-family: 'Montserrat', sans-serif;
+	font-size: 3em;
+}
+.textContent p, .textContent p a{
+	color: #fff;
+	padding: 15px;
+	font-size: 1.15em;
+	text-align: center;
+    letter-spacing: 1.3px;
+    text-decoration: none;
+}
+.bodyWrapper{
+	padding: 20px;
+}
+.sectionHeader{
+	position: relative;
+	text-align: center;
+	font-family: 'Montserrat', sans-serif;
+	font-size: 2em;
+	margin: 100px auto;
+}
+
+.sectionHeader::before{
+	content: '';
+	display: inline-block;
+	width: 25%;
+	height: 7px;
+	border-top: 1px solid #b7c11f;
+	border-bottom: 1px solid #b7c11f;
+	position: absolute;
+	top: 24%;
+	left: 10%;
+}
+.sectionHeader::after{
+	content: '';
+	display: inline-block;
+	width: 25%;
+	height: 7px;
+	border-top: 1px solid #b7c11f;
+	border-bottom: 1px solid #b7c11f;
+	position: absolute;
+	top: 24%;
+	right: 10%;
+}
+
+svg #wheel {
+	animation: scroll ease 2s infinite;
+}
+.cardContainer{
+	display: flex;
+	flex-wrap: wrap;
+	padding: 10px;
+	justify-content: space-evenly;
+}
+.card{
+	position: relative;
+	width: 450px;
+	flex-direction: column;
+	display: flex;
+	background: #fff;
+	padding: 0;
+	margin: 10px;
+	min-height: 80px;
+	border-radius: 6px;
+	box-shadow: 0 0 20px 0 #cacacaa6;
+}
+.cardLeft{
+	height: 250px;
+	margin-bottom: 15px;
+}
+.cardRight{
+	padding: 10px 15px;
+	width: 90%;
+	text-align: center;
+}
+.cardRight h4{
+	font-family: 'Montserrat', sans-serif;
+	font-weight: 600;
+	font-size: 1.3em;
+	margin-bottom: 8px;
+}
+.cardRight p{
+	margin-left: 15px;
+	text-align: left;
+	width: 100%;
+	color: #565656;
+	line-height: 1.6;
+	margin-bottom: 10px;
+	text-align: center;
+}
+
+.cardRight p i{
+	font-size: 1.5em;
+	margin: 0 15px;
+}
+
+.getQuote{
+	background: #fff;
+	border: 1px solid #000;
+	padding: 10px 15px;
+	margin: 10px auto;
+	width: 70%;
+	border-radius: 8px;
+	cursor: pointer;
+	color: #000;
+	text-transform: uppercase;
+}
+.getQuote:hover{
+	background: #e49431;
+	color: #e6e0e0;
+	border-color: #b76e13;
+	box-shadow: 0 5px 15px 0 #e49431;
+	transition: .2s ease-in-out all;
+}
+
+.enquiryBtn{
+	background: #fff;
+	border: 1px solid #000;
+	padding: 10px 15px;
+	margin: 10px auto;
+	margin-left: 25px;
+	width: 50%;
+	border-radius: 8px;
+	cursor: pointer;
+	color: #000;
+	text-transform: uppercase;
+}
+.enquiryBtn i{
+	color: #e49431;
+	font-size: 1.5em;
+	margin-right: 20px;
+}
+.enquiryBtn:hover{
+	background: #e49431;
+	color: #e6e0e0;
+	border-color: #b76e13;
+	box-shadow: 0 5px 15px 0 #e49431;
+	transition: .2s ease-in-out all;
+}
+.modalContainerHidden{
+	position: fixed;
+	bottom: 0;
+	right: 0;
+	padding: 10px 20px;
+	width: 200px;
+	background: rebeccapurple;
+	border: 1px solid #fff;
+}
+.modalHead{
+	color: #fff;
+	cursor: pointer;
+}
+.modalContainerVisible{
+	position: fixed;
+	bottom: 0;
+	right: 0;
+	padding: 10px 20px;
+	width: 30%;
+	background: #edeefd;
+	border-radius: 8px;
+	border: 1px solid blue;
+}
+.custInput{
+    background: transparent;
+    border: none;
+    padding: 5px 10px;
+    border-bottom: 1px solid blue;
+    width: 85%;
+    margin: 20px;
+}
+.ribbon{
+	position: absolute;
+	top: 2%;
+	left: 0;
+	padding: 5px 40px;
+	background: red;
+	color: #fff;
+	box-shadow: 19px 6px 10px 0 #0000004a;
+}
